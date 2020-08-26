@@ -1,0 +1,15 @@
+env:
+  browser: true
+  es2020: true
+extends:
+  - 'plugin:vue/essential'
+parserOptions:
+  ecmaVersion: 11
+  sourceType: module
+plugins:
+  - vue
+ignorePatterns:
+  - tests
+rules:
+  comma-dangle: 0
+  no-unused-vars: 0
