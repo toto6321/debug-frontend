@@ -1,60 +1,79 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
+    <v-navigation-drawer
+        app
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+      <v-img
+          :src="require('@/assets/logo/gray.svg')"
+          max-width="512"
+          class="mx-auto logo"
+      />
+      <v-list>
+        <v-list-item link :to="{path: '/'}">
+          <v-list-item-icon>
+            <v-icon>
+              mdi-chevron-left
+            </v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title class="=itemTitle font-weight-bold">
+              回到欢迎界面
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+        </v-list-item>
 
-      <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar
+        height="50"
+    >
+      <v-app-bar-nav-icon
+          class="black-text"
+      />
+      <v-toolbar-title>
+        <div class="toolbarTitle"></div>
+      </v-toolbar-title>
+      <v-icon
+          right
+          class="logoIcon"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+        wsicon wsicon-logo-icon
+      </v-icon>
     </v-app-bar>
 
-    <v-content>
-      <HelloWorld/>
+    <v-content
+        class="mb-8"
+    >
+      <v-container>
+        <transition
+            name="slide-fade"
+            mode="out-in"
+        >
+
+        </transition>
+      </v-container>
     </v-content>
+
+    <v-footer
+        padless
+    >
+
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 
-  data: () => ({
-    //
-  }),
+  data: () => ({}),
 };
 </script>
