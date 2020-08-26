@@ -1,5 +1,9 @@
 module.exports = {
-  "transpileDependencies": [
+  transpileDependencies: [
     "vuetify"
-  ]
+  ],
+  devServer: {
+    host: 'localhost',
+    port: 8000
+  }
 }
